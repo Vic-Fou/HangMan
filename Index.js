@@ -35,5 +35,5 @@ while(letterRemainder>0){
         }
     }
 }
-//console.log(wordBank[0]);
-//console.log('YOU WON!');
+console.log(answerArray.join(" "));
+console.log("Good Job, The answer was "+chosenWord);
