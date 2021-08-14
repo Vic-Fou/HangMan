@@ -30,14 +30,12 @@ let letterRemainder=(word)=>{
 }
 
 
-
-
-
 while(answerSetUp>0){
 
     const userProgression=(answer)=>{
         answer=answerSetUp()
-        return console.log(answer.join(" "))};
+        return console.log(answer.join(" "))
+    };
     const getGuess=()=>{
         return prompt.question("Please guess a letter: ");
     };
@@ -45,22 +43,42 @@ while(answerSetUp>0){
         guess=getGuess;
         word=pickRandomWord;
         answerArray=userProgression;
-        if (guess.length!==1){
-            console.log("Please enter one letter.");
+        if (guess.length!==1 ){
+            console.log("Oops!Please enter one letter.");
         }
+       /* else if(/[a-zA-Z]/.test(guess)){
+            return true
+        }
+        else if(/[^a-zA-Z]/.test(guess)){
+            console.log("Please only use letters.")
+            return false
+        }*/
         else if(guess===null){
             return;
         }
         else{
             for(let j=0;j<word.length; j++){
-            if (word[j]===guess){
+            if (word[j]===guess){{
                 answerArray[j] = guess;
                 letterRemainder--;
+                };}
+                else if(/[a-zA-Z]/.test(guess)){
+                    return true
+
+            }
+            else if(/^[a-zA-Z]/.test(guess)){
+                console.log("Please only use letters.")
+                return false
+            }
+
+            else{
+                return console.log("O\nOops! Please try another letter")
                 };
             };
         };
     };
-}
+    return gameState;
+};
 //youwin= console.log(userprogression.join(" "));
 //rightAnswer=console.log("Good Job! the answer was"+pickRandomWord)
 //can I make rounds with a for loop or should I make a while loop during the game state?
