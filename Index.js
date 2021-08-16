@@ -173,14 +173,14 @@ let numberOfRounds =1;
    
         const letterGuessed3 = prompt.question("Please guess a letter: ");
         if (letterGuessed3.length !== 1) {
-          console.log("Please enter one letter.");
+          console.log("Please enter one letter.\n");
         } else if (letterGuessed3 === null) {
           return;
         }else if (!/^[a-zA-Z]*$/g.test(letterGuessed)){
-         console.log("\nInvalid.\nPlease enter letters.")
+         console.log("\nInvalid.\nPlease enter letters.\n")
      
        }else if (!chosenWord3.includes(letterGuessed3)) {
-          console.log("\n O\nIncorrect.Try a different letter");
+          console.log("\n O\nIncorrect.Try a different letter\n");
           wrongGuesses3++;
           if (wrongGuesses3 === 2) {
             console.log(" O\n/");
