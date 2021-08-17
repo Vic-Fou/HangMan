@@ -24,21 +24,18 @@ const wordBank = [
   "object",
   "permanent",
   "data",
-]; //require("./Word-Bank.JSON");
+]; 
 
 console.log("\nWelcome to Hang-Man!\nPress ctr+c to end game.\n");
 
 let chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
-console.log(chosenWord);
+
 let chosenWord2 = wordBank[Math.floor(Math.random() * wordBank.length)];
-console.log(chosenWord2);
+
 let chosenWord3 = wordBank[Math.floor(Math.random() * wordBank.length)];
-console.log(chosenWord3);
 
-/*let parsedWordBank = JSON.parse(JSON.stringify(wordBank[""]));
-let chosenWord= parsedWordBank[Math.floor(Math.random()*parsedWordBank.length)];*/
 
-//console.log(chosenWord);
+
 
 let answerArray = [];
 for (let i = 0; i < chosenWord.length; i++) {
@@ -61,14 +58,14 @@ let letterRemainder2 = chosenWord2.length;
 
 let letterRemainder3 = chosenWord3.length;
 
-//use these variants to make assests to be used in the other rounds
+
 
 let wrongGuesses = 0;
 let wrongGuesses2 = 0;
 let wrongGuesses3 = 0;
 let numberOfRounds = 1;
 
-//increment rounds toward the end , then console.log them to show the player which they are on
+
 
 while (letterRemainder3 > 0 && wrongGuesses <= 6 && numberOfRounds <= 4) {
   console.log("*Round" + " " + numberOfRounds + "" + "*\n");
@@ -104,9 +101,7 @@ while (letterRemainder3 > 0 && wrongGuesses <= 6 && numberOfRounds <= 4) {
       return;
     }
   }
-  //this needs to be cleaned up so that the wrongGuesses won't increment with the right answer
-  //Also the Hangman and gameover should only show if the player is doing wrong
-  //Done
+ 
   else {
     for (let j = 0; j < chosenWord.length; j++) {
       if (chosenWord[j] === letterGuessed) {
@@ -116,8 +111,7 @@ while (letterRemainder3 > 0 && wrongGuesses <= 6 && numberOfRounds <= 4) {
       } else if (letterRemainder === 0) continue;
     }
   }
-  //find a way to track rounds then increment them to make the while loop repeat
-  //use the new asssets
+  
   while (letterRemainder === 0) {
     console.log("Good Job, The answer was " + chosenWord);
 
@@ -165,7 +159,7 @@ while (letterRemainder3 > 0 && wrongGuesses <= 6 && numberOfRounds <= 4) {
             console.log(letterRemainder2);
           } else if (letterRemainder2 === 0) continue;
         }
-      } //}
+      } 
       while (letterRemainder2 === 0) {
         console.log("Good Job,the answer was " + chosenWord2);
         let numberOfRounds = 3;
@@ -228,6 +222,4 @@ while (letterRemainder3 > 0 && wrongGuesses <= 6 && numberOfRounds <= 4) {
     }
   }
 }
-//console.log(answerArray.join(" "));
 
-// Don't forget to include arrow functions
