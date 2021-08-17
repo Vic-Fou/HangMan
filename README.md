@@ -96,4 +96,4 @@ const letter = prompt.question("Please guess a letter: ");
 
 and that's basically everything that I did, I hope you have fun recreating my code and don't beat yourself over the head doing this stuff. Take **breaks on days you work on it**, the right answers will come to you eventually. That's How I completed it anyway. **Thank you for your time!** 
 
-##~ Victorious Foulks
+## ~ Victorious Foulks
